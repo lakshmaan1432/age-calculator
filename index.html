@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+            border-radius: 45px;
+            border: 10px;
+            border-style: double;
+            width: 50%;
+            margin: auto;
+            min-height: 50vh;
+        }
+
+        input {
+            border: solid 1px;
+            width: 50%;
+            border-radius: 5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: larger;
+        }
+
+        button {
+            margin-top: 3%;
+            height: 27px;
+            width: 50%;
+            background-color: lightblue;
+            border: 1px;
+            border-radius: 5px;
+            border-style: solid;
+            transition: 1s;
+        }
+
+        button:hover{
+background-color: blue;
+color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h1> Age Calculator </h1>
+        <input id="birthyear" type="text" placeholder="Enter your year of birth:">
+        <button onclick="calculateage()">Calculate</button>
+
+        <p id="age"> </p>
+
+        <script>
+            function calculateage() {
+                let yearOfBirth = document.getElementById("birthyear").value
+                let age = 2023 - yearOfBirth
+                document.getElementById("age").innerText = age
+            }    
+        </script>
+    </div>
+</body>
+
+</html>
